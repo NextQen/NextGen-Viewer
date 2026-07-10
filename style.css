@@ -15,7 +15,7 @@ body {
     margin: 0;
     padding: 40px 20px;
     min-height: 100vh;
-    min-width: 1200px;
+    min-width: 1200px; /* Force Desktop Width */
     box-sizing: border-box;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 header {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 h1 {
@@ -40,29 +40,16 @@ h1 {
 header p {
     color: var(--text-secondary);
     font-size: 1.1rem;
-    margin-bottom: 25px;
 }
 
-.ip-banner {
-    background: rgba(255, 165, 0, 0.1);
-    border: 1px solid rgba(255, 165, 0, 0.3);
-    padding: 12px 20px;
-    border-radius: 12px;
-    width: 780px;
-    margin: 0 auto 20px auto;
-    color: #ffa500;
-    font-size: 0.95rem;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
+/* Fixed Desktop Row Layout */
 .controls {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    width: 820px;
+    width: 650px;
     margin: 0 auto 40px auto;
     background: var(--card-bg);
     padding: 15px;
@@ -83,7 +70,7 @@ input {
     transition: all 0.3s ease;
 }
 
-input[type="text"] { width: 320px; }
+input[type="text"] { width: 350px; }
 input[type="number"] { width: 80px; text-align: center; }
 
 input:focus {
@@ -93,7 +80,7 @@ input:focus {
 }
 
 button {
-    padding: 14px 24px;
+    padding: 14px 28px;
     cursor: pointer;
     background: linear-gradient(135deg, #ff2a5f, #ff5e3a);
     color: white;
@@ -129,6 +116,11 @@ button:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
     aspect-ratio: 16/9;
+}
+
+.video-wrapper:hover {
+    transform: scale(1.02);
+    border-color: var(--primary-color);
 }
 
 .video-wrapper iframe {
